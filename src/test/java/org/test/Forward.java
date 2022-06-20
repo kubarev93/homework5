@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class lesson5 {
+public class Forward {
 
     @Test
     public void fillField(){
@@ -20,16 +20,16 @@ public class lesson5 {
         Assert.assertTrue(driver.findElement(By.xpath("//input[@name=\"wg\"]")).isDisplayed());
 
     }
-//    @Test
-//    public void selectPounds(){
-//        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-//        WebDriver driver = new ChromeDriver();
-//        driver.get("https://healthunify.com/bmicalculator/");
-//        driver.findElement(By.xpath("//select[@name=\"opt1\"]")).click();
-//        driver.findElement(By.xpath("//option[@value=\"pounds\"]")).click();
-//        Assert.assertTrue(driver.findElement(By.xpath("//input[@name=\"opt1\"]")).isDisplayed());
-//
-//    }
+    @Test
+    public void selectPounds(){
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://healthunify.com/bmicalculator/");
+        driver.findElement(By.xpath("//select[@name=\"opt1\"]")).click();
+        driver.findElement(By.xpath("//option[@value=\"pounds\"]")).click();
+        Assert.assertTrue(driver.findElement(By.xpath("//input[@name=\"opt1\"]")).isDisplayed());
+
+    }
 
 
 }
